@@ -1,0 +1,236 @@
+/* MAIN CSS Document */
+
+
+/* RESPONSIVE FONT SIZES */
+html {
+  font-size: 16px;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .nav-1 {
+    order: 1;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 400px) / 680));
+  }
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 600px) / 680));
+  }
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  html {
+    font-size: 22px;
+  }
+
+}
+
+html, body {
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1 0 auto;
+}
+
+.nav {
+  display: flex;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.nav-link a{
+	padding-left: 2em;
+	text-decoration: none;
+	color: white;
+}
+
+.nav-items {
+  display: flex;
+}
+.nav-right {
+	padding-top: 1rem;
+	margin-left:auto;
+  display: flex;
+}
+
+.nav-link a{
+	color: white;
+	text-decoration: none;
+	padding-right: 3em;
+}
+
+.logo{
+	max-width: 4em;
+	max-height: 4em;
+}
+
+.logo-container{
+	padding: 1em 3em 0em 2em;
+}
+
+/* mobile version of nav (changes to vertical list) */
+@media only screen and (max-width: 768px) {
+  .logo{
+    width: 64px;
+    height: 64px;
+  }
+  .nav-items,
+  .nav {
+    flex-direction: row;
+  }
+.nav-items {
+    display:none;
+  }
+.nav-right {
+    margin-left:0 auto;
+    padding: 1em 0em 1em 0em;
+		display: flex;
+		flex-direction: column;
+  }
+  .nav-link a{
+    text-display: none;
+  }
+
+} /* end of mobile version */
+
+/* iphoneX-specific media query */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .nav-1 {
+    order: 1;
+  }
+
+}
+/* end of iphoneX-specific media query */
+
+.header{
+	background-color: #5bc6e4;
+}
+
+.footer{
+	text-align:center;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background-color: #f9d433;
+  flex-shrink: 0;
+}
+
+.footer p{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+/*
+some font-specific stuff */
+
+h4{
+	font-family: 'Gastromond', 'Futura PT Bold', 'serif';
+	font-size: 3em;
+}
+
+h5{
+  margin-bottom: 0rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Link transition for hover (increasing accessibility) */
+a {
+	color: #581280;
+	transition: color 0.25s linear;
+  text-decoration: underline;
+}
+
+a:hover, a:focus  {
+	color: #357099;
+}
+
+.page-title h4{
+  padding-top: 0.5em;
+	font-family: 'Gastromond', 'Futura PT Bold', 'serif';
+	font-size: 2rem;
+	text-align: center;
+	margin: 0;
+}
+
+.page-title p{
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+.page-content {
+	font-weight: 400;
+	padding: 0em 3em 0em 3em;
+}
+
+.page-content ul{
+  margin-top: -10px;
+}
+
+.page-content li{
+  margin-bottom: 0;
+}
+
+
+/* COLORS FOR BORDERS OF ELEMENTS */
+.m{
+	border-color: #de51e0;
+	border-style: solid;
+	border-width: thick;
+}
+
+.s{
+	border-color: #f9d433; /* yellow */
+	border-style: solid;
+	border-width: thick;
+}
+
+.pr{
+	border-color: #f5ab2b; /* purple */
+	border-style: solid;
+	border-width: thick;
+}
+
+.page-img img{
+	width: 35%;
+	height: 50%;
+	display: block;
+	margin: 0 auto;
+
+}
